@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "mysticalwood:mystical_log",
+  "base": "minecraft:iron_sword",
+  "result": {
+    "id": "mysticalwood:mystical_iron_sword"
+  },
+  "template": "mysticalwood:mystical_upgrade_template"
+}

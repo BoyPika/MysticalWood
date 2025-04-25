@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "mysticalwood:mystical_log",
+  "base": "minecraft:iron_shovel",
+  "result": {
+    "id": "mysticalwood:mystical_iron_shovel"
+  },
+  "template": "mysticalwood:mystical_upgrade_template"
+}

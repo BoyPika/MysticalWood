@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "minecraft:emerald",
+    "L": "mysticalwood:mystical_log"
+  },
+  "pattern": [
+    "LLL",
+    "LEL",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mysticalwood:mystical_upgrade_template"
+  }
+}

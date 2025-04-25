@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "get_mystical_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mysticalwood:mystical_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "mysticalwood:block/mystical_wood",
+    "description": {
+      "translate": "advancements.mysticalwood.get_mystical_wood.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "mysticalwood:mystical_log"
+    },
+    "title": {
+      "translate": "advancements.mysticalwood.get_mystical_wood.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_mystical_wood"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

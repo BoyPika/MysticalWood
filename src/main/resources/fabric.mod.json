@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mysticalwood",
+  "version": "${version}",
+  "name": "MysticalWood",
+  "description": "",
+  "authors": ["BoyPika"],
+  "contact": {},
+  "icon": "assets/mysticalwood/textures/block/mystical_log.png",
+  "license": "GPL-3.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.boypika.mysticalwood.MysticalWood"
+    ],
+    "client": [
+      "net.boypika.mysticalwood.client.MysticalWoodClient"
+    ],
+    "fabric-datagen": [
+      "net.boypika.mysticalwood.datagen.MysticalWoodDataGen"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

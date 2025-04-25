@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "mysticalwood:mystical_log",
+  "base": "minecraft:stone_hoe",
+  "result": {
+    "id": "mysticalwood:mystical_stone_hoe"
+  },
+  "template": "mysticalwood:mystical_upgrade_template"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "mysticalwood:mystical_log",
+  "base": "minecraft:netherite_pickaxe",
+  "result": {
+    "id": "mysticalwood:mystical_netherite_pickaxe"
+  },
+  "template": "mysticalwood:mystical_upgrade_template"
+}

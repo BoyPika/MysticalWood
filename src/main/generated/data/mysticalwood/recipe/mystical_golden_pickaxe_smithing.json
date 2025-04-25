@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "mysticalwood:mystical_log",
+  "base": "minecraft:golden_pickaxe",
+  "result": {
+    "id": "mysticalwood:mystical_golden_pickaxe"
+  },
+  "template": "mysticalwood:mystical_upgrade_template"
+}

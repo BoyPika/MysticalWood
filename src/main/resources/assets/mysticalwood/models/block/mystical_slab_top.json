@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "mysticalwood:block/mystical_planks",
+    "side": "mysticalwood:block/mystical_planks",
+    "top": "mysticalwood:block/mystical_planks"
+  }
+}

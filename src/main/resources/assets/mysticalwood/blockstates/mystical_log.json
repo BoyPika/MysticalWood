@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mysticalwood:block/mystical_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mysticalwood:block/mystical_log"
+    },
+    "axis=z": {
+      "model": "mysticalwood:block/mystical_log_horizontal",
+      "x": 90
+    }
+  }
+}
