@@ -28,5 +28,40 @@ public class MysticalWoodItemTagGenerator extends FabricTagProvider<Item> {
                 .add(MysticalWood.STRIPPED_MYSTICAL_LOG_ITEM)
                 .add(MysticalWood.STRIPPED_MYSTICAL_WOOD_ITEM)
                 .setReplace(true);
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(MysticalWood.MYSTICAL_WOODEN_AXE)
+                .add(MysticalWood.MYSTICAL_STONE_AXE)
+                .add(MysticalWood.MYSTICAL_IRON_AXE)
+                .add(MysticalWood.MYSTICAL_GOLDEN_AXE)
+                .add(MysticalWood.MYSTICAL_DIAMOND_AXE)
+                .add(MysticalWood.MYSTICAL_NETHERITE_AXE);
+        getOrCreateTagBuilder(ItemTags.HOES)
+                .add(MysticalWood.MYSTICAL_WOODEN_HOE)
+                .add(MysticalWood.MYSTICAL_STONE_HOE)
+                .add(MysticalWood.MYSTICAL_IRON_HOE)
+                .add(MysticalWood.MYSTICAL_GOLDEN_HOE)
+                .add(MysticalWood.MYSTICAL_DIAMOND_HOE)
+                .add(MysticalWood.MYSTICAL_NETHERITE_HOE);
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(MysticalWood.MYSTICAL_WOODEN_PICKAXE)
+                .add(MysticalWood.MYSTICAL_STONE_PICKAXE)
+                .add(MysticalWood.MYSTICAL_IRON_PICKAXE)
+                .add(MysticalWood.MYSTICAL_GOLDEN_PICKAXE)
+                .add(MysticalWood.MYSTICAL_DIAMOND_PICKAXE)
+                .add(MysticalWood.MYSTICAL_NETHERITE_PICKAXE);
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(MysticalWood.MYSTICAL_WOODEN_SHOVEL)
+                .add(MysticalWood.MYSTICAL_STONE_SHOVEL)
+                .add(MysticalWood.MYSTICAL_IRON_SHOVEL)
+                .add(MysticalWood.MYSTICAL_GOLDEN_SHOVEL)
+                .add(MysticalWood.MYSTICAL_DIAMOND_SHOVEL)
+                .add(MysticalWood.MYSTICAL_NETHERITE_SHOVEL);
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(MysticalWood.MYSTICAL_WOODEN_SWORD)
+                .add(MysticalWood.MYSTICAL_STONE_SWORD)
+                .add(MysticalWood.MYSTICAL_IRON_SWORD)
+                .add(MysticalWood.MYSTICAL_GOLDEN_SWORD)
+                .add(MysticalWood.MYSTICAL_DIAMOND_SWORD)
+                .add(MysticalWood.MYSTICAL_NETHERITE_SWORD);
     }
 }
