@@ -19,7 +19,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -311,7 +310,7 @@ public class MysticalWood implements ModInitializer {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(itemGroup -> itemGroup.add(MYSTICAL_LOG_ITEM));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(itemGroup -> itemGroup.add(MYSTICAL_UPGRADE_TEMPLATE));
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, MYSTICAL_LOG_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, MYSTICAL_LOG_PLACED_KEY);
         StrippableBlockRegistry.register(MYSTICAL_LOG, STRIPPED_MYSTICAL_LOG);
     }
 }
