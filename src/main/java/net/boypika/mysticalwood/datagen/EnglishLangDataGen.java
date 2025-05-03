@@ -63,5 +63,11 @@ public class EnglishLangDataGen extends FabricLanguageProvider {
         translationBuilder.add(MysticalWood.MYSTICAL_WOOD_ITEM, "Mystical Wood");
         translationBuilder.add(MysticalWood.STRIPPED_MYSTICAL_WOOD, "Stripped Mystical Wood");
         translationBuilder.add(MysticalWood.STRIPPED_MYSTICAL_WOOD_ITEM, "Stripped Mystical Wood");
+
+        translationBuilder.add(MysticalWood.MYSTICAL_UPGRADE_TEMPLATE, "Mystical Upgrade Template");
+        translationBuilder.add("item.mysticalwood.mystical_upgrade_template.appliesTo", "Tools and Swords");
+        translationBuilder.add("item.mysticalwood.mystical_upgrade_template.ingredients", "Mystical Log");
+        translationBuilder.add("item.mysticalwood.mystical_upgrade_template.baseSlot", "Add a tool or sword");
+        translationBuilder.add("item.mysticalwood.mystical_upgrade_template.additionsSlot", "Add a Mystical Log");
     }
 }

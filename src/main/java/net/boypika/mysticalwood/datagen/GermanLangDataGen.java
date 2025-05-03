@@ -63,5 +63,11 @@ public class GermanLangDataGen extends FabricLanguageProvider {
         translationBuilder.add(MysticalWood.MYSTICAL_WOOD_ITEM, "Mystischeholz");
         translationBuilder.add(MysticalWood.STRIPPED_MYSTICAL_WOOD, "Entrindetes Mystischeholz");
         translationBuilder.add(MysticalWood.STRIPPED_MYSTICAL_WOOD_ITEM, "Entrindetes Mystischeholz");
+
+        translationBuilder.add(MysticalWood.MYSTICAL_UPGRADE_TEMPLATE, "Mystischeaufwertung");
+        translationBuilder.add("item.mysticalwood.mystical_upgrade_template.appliesTo", "Werkzeuge und Schwerter");
+        translationBuilder.add("item.mysticalwood.mystical_upgrade_template.ingredients", "Mystischestämme");
+        translationBuilder.add("item.mysticalwood.mystical_upgrade_template.baseSlot", "Werkzeug oder Schwert hinzufügen");
+        translationBuilder.add("item.mysticalwood.mystical_upgrade_template.additionsSlot", "Mystischestamm hinzufügen");
     }
 }

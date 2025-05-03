@@ -22,11 +22,15 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 public class MysticalWood implements ModInitializer {
 
@@ -69,7 +73,14 @@ public class MysticalWood implements ModInitializer {
     public static final Item MYSTICAL_SLAB_ITEM = new BlockItem(MYSTICAL_SLAB, new Item.Settings().registryKey(MYSTICAL_SLAB_ITEM_KEY));
 
     public static final RegistryKey<Item> MYSTICAL_UPGRADE_TEMPLATE_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, "mystical_upgrade_template"));
-    public static final Item MYSTICAL_UPGRADE_TEMPLATE = new Item(new Item.Settings().registryKey(MYSTICAL_UPGRADE_TEMPLATE_KEY));
+    public static final Item MYSTICAL_UPGRADE_TEMPLATE = new SmithingTemplateItem(
+            Text.translatable("item.mysticalwood.mystical_upgrade_template.appliesTo").formatted(Formatting.BLUE),
+            Text.translatable("item.mysticalwood.mystical_upgrade_template.ingredients").formatted(Formatting.BLUE),
+            Text.translatable("item.mysticalwood.mystical_upgrade_template.baseSlot"),
+            Text.translatable("item.mysticalwood.mystical_upgrade_template.additionsSlot"),
+            List.of(Identifier.ofVanilla("container/slot/hoe"), Identifier.ofVanilla("container/slot/axe"), Identifier.ofVanilla("container/slot/sword"), Identifier.ofVanilla("container/slot/shovel"), Identifier.ofVanilla("container/slot/pickaxe")),
+            List.of(Identifier.of(MOD_ID, "container/slot/block")),
+            new Item.Settings().rarity(Rarity.UNCOMMON).registryKey(MYSTICAL_UPGRADE_TEMPLATE_KEY));
 
     public static final RegistryKey<Item> MYSTICAL_WOODEN_SWORD_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, "mystical_wooden_sword"));
     public static final Item MYSTICAL_WOODEN_SWORD = new Item(new Item.Settings().registryKey(MYSTICAL_WOODEN_SWORD_KEY).sword(ToolMaterial.WOOD, 3.0F, -2.4F).enchantable(100));
@@ -247,6 +258,7 @@ public class MysticalWood implements ModInitializer {
             itemGroup.add(MYSTICAL_GOLDEN_HOE);
             itemGroup.add(MYSTICAL_DIAMOND_HOE);
             itemGroup.add(MYSTICAL_NETHERITE_HOE);
+            itemGroup.add(MYSTICAL_UPGRADE_TEMPLATE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(itemGroup -> {
             itemGroup.add(MYSTICAL_WOODEN_SWORD);
@@ -297,9 +309,8 @@ public class MysticalWood implements ModInitializer {
             itemGroup.add(MYSTICAL_STAIRS_ITEM);
             itemGroup.add(MYSTICAL_SLAB_ITEM);
         });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(itemGroup -> {
-            itemGroup.add(MYSTICAL_LOG_ITEM);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(itemGroup -> itemGroup.add(MYSTICAL_LOG_ITEM));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(itemGroup -> itemGroup.add(MYSTICAL_UPGRADE_TEMPLATE));
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, MYSTICAL_LOG_PLACED_KEY);
         StrippableBlockRegistry.register(MYSTICAL_LOG, STRIPPED_MYSTICAL_LOG);
     }
